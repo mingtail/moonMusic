@@ -26,11 +26,11 @@
       display: inline-block
       vertical-align: top
       margin-top: 6px
-      width: 30px
+      width: 32px
       height: 32px
-      margin-right: 9px
+      margin-right: 6px
       bg-image('logo')
-      background-size: 30px 32px
+      background-size: 32px 32px
     }
     .text{
       display: inline-block
