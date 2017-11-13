@@ -13,6 +13,18 @@
   import Scroll from 'base/scroll/scroll'
   import Loading from 'base/loading/loading'
 
+  export default {
+    data () {
+      return {
+        topList: []
+      }
+    },
+    components: {
+      Scroll,
+      Loading
+    }
+  }
+
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">

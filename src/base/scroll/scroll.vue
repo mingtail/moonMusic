@@ -25,7 +25,11 @@
         type: Array,
         default: null
       },
-      pullup: {
+      pullUpLoad: {
+        type: Boolean,
+        default: false
+      },
+      pullDownRefresh: {
         type: Boolean,
         default: false
       },
@@ -60,10 +64,18 @@
           })
         }
 
-        if (this.pullup) {
+        if (this.pullUpLoad) {
           this.scroll.on('scrollEnd', () => {
             if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
               this.$emit('scrollToEnd')
+            }
+          })
+        }
+
+        if (this.pullDownRefresh) {
+          this.scroll.on('touchEnd', (pos) => {
+            if (pos.y > 50) {
+              this.$emit('pullingDown')
             }
           })
         }
